@@ -1,16 +1,20 @@
 # isar_infection_issue
 
-Replication for Isar infection flagging issue
+## Requirements
+| Item              | Version                                    |
+| ----------------- | ------------------------------------------ |
+| Platform          | Windows 10                                 |
+| Flutter           | 3.0.5                                      |
+| Bitdefender       | database up to date                        |
+| Isar dependencies | versions in [pubspec.yaml](./pubspec.yaml) |
 
-## Getting Started
+## Replicating the issue
+1. Execute `flutter pub get`
+2. Execute `flutter run -d windows`
+3. Notice Bitdefender (Antivirus feature) Report
+![Bitdefender report](./docs/bitdefender_report.png)
 
-This project is a starting point for a Flutter application.
+4. Notice error in the console
+![console output](./docs/console_output.gif)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+5. Send the file to VirusTotal for analysis and notice the [report](https://www.virustotal.com/gui/file/d060fdfb6081ddd3b5d58910d32bbe01befb43a30a641b4b23e7e4b7e6685f0a?nocache=1)
